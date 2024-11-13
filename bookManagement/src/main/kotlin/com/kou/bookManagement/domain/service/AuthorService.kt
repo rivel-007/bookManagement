@@ -6,7 +6,9 @@ import com.kou.bookManagement.domain.model.Book
 import com.kou.bookManagement.repository.AuthorRepository
 import com.kou.bookManagement.repository.BookRepository
 import jakarta.persistence.EntityNotFoundException
+import org.springframework.stereotype.Service
 
+@Service
 class AuthorService(private val bookRepository: BookRepository, private val authorRepository: AuthorRepository) {
     fun insertAuthor(request: AuthorRequest) : Author {
         //リクエストの情報から書籍を抽出
